@@ -1,0 +1,297 @@
+Critical (CVSS Score: 9.0–10.0)
+
+1. SQL Injection Vulnerability
+Description: An attacker manipulates SQL queries by injecting malicious input into application inputs.
+Impact: Data theft, unauthorized access, or modification of the database.
+Recommendation: Use prepared statements with parameterized queries and validate user inputs.
+
+2. NoSQL Injection Vulnerability
+Description: Malicious inputs are used to manipulate NoSQL database queries.
+Impact: Data leakage, unauthorized access, or denial of service.
+Recommendation: Validate and sanitize inputs, and use query parameterization for NoSQL databases.
+
+3. Command Injection Vulnerability
+Description: Unsanitized input is executed as commands on the server.
+Impact: Full system compromise or unauthorized access to server resources.
+Recommendation: Validate and sanitize all inputs and avoid executing user inputs directly in commands.
+
+4. Unsafe Object Deserialization Vulnerability
+Description: Attacker manipulates serialized data to execute arbitrary code during deserialization.
+Impact: Remote code execution or denial of service.
+Recommendation: Avoid using unsafe serialization formats and validate serialized data.
+
+5. LDAP Injection Vulnerability
+Description: Malicious input is injected into LDAP queries.
+Impact: Unauthorized access to sensitive directory information.
+Recommendation: Use parameterized queries and properly escape user inputs.
+
+6. Remote File Inclusion (RFI)
+Description: Application allows an attacker to include remote files through unsanitized input.
+Impact: Remote code execution, data theft, or complete system compromise.
+Recommendation: Restrict file paths to trusted locations and validate all inputs.
+
+7. Cross-Site Scripting (XSS) Vulnerability
+Description: Attacker injects malicious scripts into web pages viewed by other users.
+Impact: Session hijacking, data theft, or defacement.
+Recommendation: Escape user inputs and use Content Security Policy (CSP).
+
+8. Broken API Authentication
+Description: API endpoints lack proper authentication and authorization controls.
+Impact: Unauthorized access to sensitive data or actions.
+Recommendation: Implement robust authentication mechanisms, such as OAuth or API tokens.
+
+9. Directory Traversal
+Description: Attackers use file path manipulation to access restricted files.
+Impact: Access to sensitive system files or configurations.
+Recommendation: Sanitize and validate file paths and restrict directory access.
+
+10. Open Admin Panel
+Description: Admin interfaces are exposed without proper authentication.
+Impact: Unauthorized access to administrative controls and sensitive data.
+Recommendation: Restrict access to admin panels using strong authentication and IP whitelisting.
+
+11. Server-Side Request Forgery (SSRF)
+Description: Attacker manipulates server requests to access internal systems or services.
+Impact: Information disclosure, system compromise, or lateral movement.
+Recommendation: Validate and restrict outgoing requests to trusted domains.
+
+12. Subdomain Takeover
+Description: Unclaimed subdomains of an application can be hijacked by attackers.
+Impact: Phishing, data theft, or malicious activities under the trusted domain.
+Recommendation: Regularly monitor and reclaim unlinked or unused subdomains.
+
+13. Server-Side Template Injection (SSTI)
+Description: Unsanitized input is rendered in templates, allowing code execution on the server.
+Impact: Remote code execution or data leakage.
+Recommendation: Validate template inputs and use secure template engines.
+
+14. Host Header Injection
+Description: Attacker manipulates HTTP Host headers to exploit server behavior.
+Impact: Cache poisoning, redirecting users to malicious sites, or sensitive data exposure.
+Recommendation: Validate and normalize Host headers and implement strict domain validation.
+
+High (CVSS Score: 7.0–8.9)
+
+1. XML External Entities (XXE) Vulnerability
+Description: Malicious XML inputs allow external entity resolution, accessing sensitive files or executing remote requests.
+Impact: Sensitive data leakage, SSRF, or denial of service.
+Recommendation: Disable external entity resolution and use secure XML parsers.
+
+2. Insecure Direct Object References (IDOR) Vulnerability
+Description: Users can manipulate object references to access unauthorized data.
+Impact: Unauthorized data access or modification.
+Recommendation: Implement access control checks and use indirect references.
+
+3. Weak Cryptographic Implementations
+Description: Use of outdated or insecure cryptographic algorithms or protocols.
+Impact: Data interception or compromise.
+Recommendation: Use modern cryptographic standards (e.g., AES-256, TLS 1.3).
+
+4. Insecure Default Framework Configurations
+Description: Default configurations expose sensitive information or functionality.
+Impact: Increased attack surface or unintended vulnerabilities.
+Recommendation: Harden framework configurations and disable unused features.
+
+5. Unrestricted File Uploads
+Description: Users can upload files without proper validation.
+Impact: Remote code execution or malicious file deployment.
+Recommendation: Restrict file types, validate file content, and scan for malware.
+
+6. Default Credentials
+Description: Applications use default admin credentials that attackers can exploit.
+Impact: Unauthorized administrative access.
+Recommendation: Enforce strong, unique credentials during setup.
+
+7. Application Workflow Manipulation
+Description: Attackers manipulate logical workflows to bypass security controls.
+Impact: Unauthorized actions or privilege escalation.
+Recommendation: Implement strict server-side validations for workflows.
+
+8. Open Redirects
+Description: URLs allow redirection to untrusted domains via unsanitized inputs.
+Impact: Phishing, stealing user credentials, or malware distribution.
+Recommendation: Validate and restrict redirection URLs to trusted domains.
+
+9. Weak Authorization Checks
+Description: Inadequate checks allow users to perform unauthorized actions.
+Impact: Privilege escalation or data breaches.
+Recommendation: Implement robust authorization checks for all user actions.
+
+10. TLS/SSL Weak Cipher Suites
+Description: Usage of weak ciphers or protocols in TLS/SSL configurations.
+Impact: Data interception or decryption by attackers.
+Recommendation: Configure servers to use strong ciphers and enforce TLS 1.3 or 1.2.
+
+11. DNS Rebinding
+Description: Malicious domains resolve to internal network addresses, bypassing security restrictions.
+Impact: Unauthorized access to internal systems or data exfiltration.
+Recommendation: Validate DNS responses and restrict internal IP access.
+
+12. JWT Weak Signing Algorithms
+Description: Use of insecure signing algorithms (e.g., HS256) for JWTs.
+Impact: Token forgery or unauthorized access.
+Recommendation: Use robust algorithms like RS256 or ES256 and validate signatures properly.
+
+13. GraphQL Query Depth/Complexity Attacks
+Description: Overly complex GraphQL queries exhaust server resources.
+Impact: Denial of service or performance degradation.
+Recommendation: Implement query depth and complexity limits, and rate-limit requests.
+
+14. Unsafe Content Security Policy (CSP)
+Description: Misconfigured CSP allows unsafe resource inclusion or execution.
+Impact: Cross-site scripting (XSS) or code injection attacks.
+Recommendation: Define a restrictive CSP and avoid unsafe-inline or unsafe-eval.
+
+15. Race Condition Exploits
+Description: Exploiting simultaneous operations to access or modify shared resources.
+Impact: Data corruption, unauthorized actions, or privilege escalation.
+Recommendation: Use locking mechanisms and ensure atomic operations.
+
+16. Weak Hashing Algorithms for Passwords
+Description: Use of outdated or weak hashing algorithms like MD5 or SHA1.
+Impact: Password cracking or unauthorized access.
+Recommendation: Use secure algorithms like bcrypt, Argon2, or PBKDF2 for hashing passwords.
+
+Medium (CVSS Score: 4.0–6.9)
+
+1. Exposed Debugging/Stack Traces
+Description: Applications display debugging or stack trace information to users.
+Impact: Attackers gain insight into application internals or sensitive data.
+Recommendation: Disable debugging in production and implement generic error messages.
+
+2. Unencrypted Data Transmission
+Description: Data is transmitted over HTTP or other insecure channels.
+Impact: Sensitive information can be intercepted or tampered with.
+Recommendation: Enforce HTTPS and encrypt all sensitive data in transit.
+
+3. Missing Rate-Limiting in APIs
+Description: APIs allow unlimited requests, leading to abuse or brute-force attacks.
+Impact: Denial of service or unauthorized data access.
+Recommendation: Implement rate-limiting and throttling for API endpoints.
+
+4. Excessive Data Exposure in APIs
+Description: APIs return unnecessary or sensitive data in responses.
+Impact: Data leakage or exposure of sensitive information.
+Recommendation: Only return data explicitly required by clients and enforce data filtering.
+
+5. Mass Assignment Vulnerability
+Description: Attackers manipulate object properties via APIs or forms.
+Impact: Unauthorized data modification or privilege escalation.
+Recommendation: Use allowlists to restrict assignable properties and validate inputs.
+
+6. MIME Type Spoofing Vulnerability
+Description: Malicious files bypass file type checks by spoofing MIME types.
+Impact: Deployment of malicious files or unauthorized access.
+Recommendation: Validate file content and enforce correct MIME types.
+
+7. Directory Indexing Vulnerability
+Description: Web servers expose directory listings due to improper configurations.
+Impact: Exposure of sensitive files or application structure.
+Recommendation: Disable directory listing in server configurations.
+
+8. Weak Password Policy
+Description: Applications allow short or predictable passwords.
+Impact: Increased risk of password cracking and account compromise.
+Recommendation: Enforce strong password policies (e.g., length, complexity, expiration).
+
+9. Insufficient Session Expiration Vulnerability
+Description: Sessions remain active for long periods after user inactivity.
+Impact: Hijacked sessions can be reused by attackers.
+Recommendation: Implement session timeouts and inactivity-based expiration.
+
+10. Improper CORS Configuration
+Description: Applications allow overly permissive cross-origin resource sharing.
+Impact: Sensitive data can be accessed by untrusted origins.
+Recommendation: Restrict CORS origins to trusted domains and use specific headers.
+
+11. Session Hijacking Vulnerability
+Description: Attackers steal session tokens to impersonate users.
+Impact: Unauthorized access to user accounts.
+Recommendation: Use secure cookies, implement token rotation, and validate IPs and user agents.
+
+12. Sensitive Data Logging
+Description: Applications log sensitive information like passwords or tokens.
+Impact: Sensitive data exposure if logs are accessed.
+Recommendation: Avoid logging sensitive information or mask it where necessary.
+
+13. Logging of Sensitive Data
+Description: Logs include sensitive data such as credit card numbers or credentials.
+Impact: Leakage of sensitive information if logs are compromised.
+Recommendation: Scrub or anonymize sensitive data before logging.
+
+14. Clickjacking
+Description: Malicious websites load your site in iframes to trick users into unintended actions.
+Impact: Unauthorized actions or user account compromise.
+Recommendation: Use the X-Frame-Options header or Content-Security-Policy frame-ancestors directive.
+
+15. HTTP Parameter Pollution
+Description: Attackers manipulate HTTP parameters to bypass security checks.
+Impact: Authentication bypass or unauthorized actions.
+Recommendation: Validate and sanitize all HTTP parameters on the server side.
+
+16. Client-Side Validation Bypass
+Description: Attackers bypass client-side validation by tampering with requests.
+Impact: Injection attacks or unauthorized actions.
+Recommendation: Enforce server-side validation for all inputs.
+
+17. Improper Error Handling
+Description: Detailed error messages reveal sensitive information to attackers.
+Impact: Information disclosure or easier exploitation of vulnerabilities.
+Recommendation: Implement generic error messages and log detailed errors securely.
+
+18. JavaScript Prototype Pollution
+Description: Attackers modify JavaScript object prototypes to execute malicious actions.
+Impact: Application behavior manipulation or denial of service.
+Recommendation: Validate user inputs and avoid using untrusted objects.
+
+19. Insecure Dev/Test Environments in Production
+Description: Development or testing environments are accessible in production.
+Impact: Exposure of sensitive configurations or debugging features.
+Recommendation: Isolate dev/test environments from production and restrict access.
+
+20. Insecure Cookie Flags (e.g., HttpOnly, Secure)
+Description: Cookies lack security flags like HttpOnly or Secure.
+Impact: Increased risk of XSS or session hijacking.
+Recommendation: Enable HttpOnly, Secure, and SameSite flags for cookies.
+
+21. Poor Random Number Generation
+Description: Applications use weak or predictable random number generators.
+Impact: Predictable tokens or keys leading to security breaches.
+Recommendation: Use cryptographically secure random number generators.
+
+22. HTML5 Web Storage Vulnerabilities
+Description: Sensitive data is stored insecurely in browser storage.
+Impact: Data theft via XSS or browser extensions.
+Recommendation: Avoid storing sensitive data in web storage or encrypt it before storage.
+
+Low (CVSS Score: 0.1–3.9)
+
+1. Known Vulnerabilities in Dependencies
+Description: Dependencies used in the application have publicly disclosed vulnerabilities.
+Impact: Attackers can exploit known vulnerabilities to compromise the application.
+Recommendation: Regularly update dependencies and use tools to scan for vulnerabilities (e.g., Dependabot, Snyk).
+
+2. Outdated Libraries
+Description: The application uses libraries or frameworks with outdated versions that may lack security patches.
+Impact: Increased risk of exploitation through known vulnerabilities.
+Recommendation: Maintain an up-to-date inventory of libraries and periodically update to supported, secure versions.
+
+3. Unsafe Use of eval() in JavaScript
+Description: The eval() function is used to execute untrusted code or user input.
+Impact: Execution of malicious code, leading to XSS or data theft.
+Recommendation: Avoid using eval(); use safer alternatives like JSON.parse() or function literals.
+
+4. Inadequate Role-Based Access Control (RBAC)
+Description: Permissions are not enforced properly, allowing users to perform unauthorized actions.
+Impact: Data breaches or privilege escalation by malicious users.
+Recommendation: Implement and enforce RBAC with least privilege and validate roles on the server side.
+
+5. Inventory and Resource Manipulation
+Description: Attackers manipulate inventory data or resources through vulnerable endpoints.
+Impact: Unauthorized data modification or theft of critical resources.
+Recommendation: Validate and sanitize all input, and implement server-side checks for resource ownership and availability.
+
+6. IP Spoofing Detection
+Description: The application fails to detect or prevent IP spoofing attacks.
+Impact: Bypassing access controls, denial of service, or fraud.
+Recommendation: Use IP verification techniques, monitor headers like X-Forwarded-For, and deploy anti-spoofing measures such as ingress filtering.

